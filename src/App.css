@@ -1,38 +1,54 @@
-.App {
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  width: 80px;
+  height: 80px;
   text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 80px;
+}
+.square:focus{ /*:focus permet de cibler un élément lorsque celui-ci reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris*/
+  outline: none;  /*outline est le contour qui se fait lorsqu'on appuie sur une case.*/
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+ }
+ .game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  flex-direction: row;
+  margin: 0 auto;  
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ ul {
+  padding-left: 30px;
+  list-style-type: none;
+ }
+ .game-info {
+  margin-left: 20px;
+ }
+ .status {
+  margin-bottom: 10px;
+ }
+ .border-row{
+   display: flex;
+   flex-wrap: nowrap;
+ }
+ .title{
+   text-align: center;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ body{
+   background-color: rgb(255, 147, 147);
+ }
